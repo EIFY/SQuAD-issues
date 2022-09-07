@@ -13,6 +13,10 @@ path = 'train-v2.0.json'
 s = next(open(path, "r", encoding="utf-8"))
 j = json.loads(s.strip())
 
+from fairseq.data.encoders.gpt2_bpe import get_encoder
+encoder_json, vocab_bpe = 'gpt2_bpe/encoder.json', 'gpt2_bpe/vocab.bpe'
+bpe = get_encoder(encoder_json, vocab_bpe)
+
 def squad2_ligature_check(data, threshold):
     l = []
     def check(l1, l2):
