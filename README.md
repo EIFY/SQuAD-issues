@@ -94,7 +94,7 @@ p['context']
 ```
 >Before the release of iOS 5, the iPod branding was used for the media player included with the iPh***one*** and iPad, a combination of the Music and Videos apps on the iPod Touch. As of iOS 5, separate apps named "Music" and "Videos" are standardized across all iOS-powered products. While the iPhone and iPad have essentially the same media player capabilities as the iPod line, they are generally treated as separate products. During the middle of 2010, iPhone sales overtook those of the iPod.'
 
-The answer span uses "one" within iPh***one***, which is strange but I am leaving this alone due to the lack of better alternatives.
+The answer span uses "one" within "iPh***one***", which is strange but I am leaving this alone due to the lack of better alternatives.
 
 ## i = 11, j = 82, k = 3
 ```
@@ -113,3 +113,55 @@ p['context']
 >Though based upon Mahayana, Tibeto-Mongolian Buddhism is one of the schools that practice Vajrayana or "Diamond Vehicle" (also referred to as Mantrayāna, Tantrayāna, Tantric Buddhism, or esoteric Buddhism). It accepts all the basic concepts of Mahāyāna, but also includes a vast array of spi~~ritual~~ and physical techniques designed to enhance Buddhist practice. Tantric Buddhism is largely concerned with ritual and meditative practices. One component of the Vajrayāna is harnessing psycho-physical energy through ***ritual, visualization, physical exercises, and meditation*** as a means of developing the mind. Using these techniques, it is claimed that a practitioner can achieve Buddhahood in one lifetime, or even as little as three years. In the Tibetan tradition, these practices can include sexual yoga, though only for some very advanced practitioners.
 
 This is where the encoding example above  came from. Using "ritual" within spi~~ritual~~ is not only strange but also incomplete: ***ritual, visualization, physical exercises, and meditation*** is the complete answer.
+
+## i = 23, j = 29, k = 1
+```
+p = j['data'][23]['paragraphs'][29]
+p['qas'][1]
+```
+```
+{'question': 'Each Brigade contains how many regiments?',
+ 'id': '56deebdc3277331400b4d81f',
+ 'answers': [{'text': 'one', 'answer_start': 33}],
+ 'is_impossible': False}
+```
+```
+p['context']
+```
+>Currently, the Regular Force comp~~one~~nt of the Army consists of three field-ready brigade groups: 1 Canadian Mechanized Brigade Group, at CFB Edmonton and CFB Shilo; 2 Canadian Mechanized Brigade Group, at CFB Petawawa and CFB Gagetown; and 5 Canadian Mechanized Brigade Group, at CFB Valcartier and Quebec City. Each contains ***one*** regiment each of artillery, armour, and combat engineers, three battalions of infantry (all scaled in the British fashion), one battalion for logistics, a squadron for headquarters/signals, and several smaller support organizations. A tactical helicopter squadron and a field ambulance are co-located with each brigade, but do not form part of the brigade's command structure.
+
+## i = 26, j = 22, k = 1
+```
+p = j['data'][26]['paragraphs'][22]
+p['qas'][1]
+```
+```
+{'question': 'Would you consider aesthetic elements alone in architectural lighting design?',
+ 'id': '56df865956340a1900b29ceb',
+ 'answers': [{'text': 'kno', 'answer_start': 58}],
+ 'is_impossible': False}
+```
+```
+p['context']
+```
+>Lighting design as it applies to the built environment is ~~k~~***no***wn as 'architectural lighting design'. Lighting of structures considers aesthetic elements as well as practical considerations of quantity of light required, occupants of the structure, energy efficiency and cost. Artificial lighting takes into account the amount of daylight received in an internal space by using Daylight factor calculation. For simple installations, hand-calculations based on tabular data are used to provide an acceptable lighting design. More critical or optimized designs now routinely use mathematical modeling on a computer using software such as Radiance which can allow an Architect to quickly undertake complex calculations to review the benefit of a particular design.
+
+The original answer span "kno" is nonsensical. Using "no" within "k***no***wn" is still strange but at least correct.
+
+## i = 26, j = 31, k = 2
+```
+p = j['data'][26]['paragraphs'][31]
+p['qas'][2]
+```
+```
+{'question': 'Would a lower GAI mean higher apparent saturation or vividness of object colors?',
+ 'id': '56df95d44a1a83140091eb81',
+ 'answers': [{'text': 'ano', 'answer_start': 156}],
+ 'is_impossible': False}
+```
+```
+p['context']
+```
+>For example, in order to meet the expectations for good color rendering in retail applications, research suggests using the well-established CRI along with ~~a~~***no***ther metric called gamut area index (GAI). GAI represents the relative separation of object colors illuminated by a light source; the greater the GAI, the greater the apparent saturation or vividness of the object colors. As a result, light sources which balance both CRI and GAI are generally preferred over ones that have only high CRI or only high GAI.
+
+Same as the above.
