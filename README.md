@@ -165,3 +165,36 @@ p['context']
 >For example, in order to meet the expectations for good color rendering in retail applications, research suggests using the well-established CRI along with ~~a~~***no***ther metric called gamut area index (GAI). GAI represents the relative separation of object colors illuminated by a light source; the greater the GAI, the greater the apparent saturation or vividness of the object colors. As a result, light sources which balance both CRI and GAI are generally preferred over ones that have only high CRI or only high GAI.
 
 Same as the above.
+
+## i = 40, j = 16, k = 2
+```
+p = j['data'][40]['paragraphs'][16]
+p['qas'][2]
+```
+```
+{'question': 'What group members are the big game hunters?',
+ 'id': '56dfa04b38dc421700152128',
+ 'answers': [{'text': 'men', 'answer_start': 115}],
+ 'is_impossible': False}
+```
+```
+p['context']
+```
+>It is easy for Western-educated scholars to fall into the trap of viewing hunter-gatherer social and sexual arrange~~men~~ts in the light of Western values.[editorializing] One common arrangement is the sexual division of labour, with women doing most of the gathering, while ***men*** concentrate on big game hunting. It might be imagined that this arrangement oppresses women, keeping them in the domestic sphere. However, according to some observers, hunter-gatherer women would not understand this interpretation. Since childcare is collective, with every baby having multiple mothers and male carers, the domestic sphere is not atomised or privatised but an empowering place to be.[citation needed] In all hunter-gatherer societies, women appreciate the meat brought back to camp by men. An illustrative account is Megan Biesele's study of the southern African Ju/'hoan, 'Women Like Meat'. Recent archaeological research suggests that the sexual division of labor was the fundamental organisational innovation that gave Homo sapiens the edge over the Neanderthals, allowing our ancestors to migrate from Africa and spread across the globe.
+
+
+## i = 48, j = 2, k = 2
+```
+p = j['data'][48]['paragraphs'][2]
+p['qas'][2]
+```
+```
+{'question': 'What modifier indicates a voiceless bilabial stop?',
+ 'id': '56e042487aa994140058e409',
+ 'answers': [{'text': 'p', 'answer_start': 32}],
+ 'is_impossible': False} 
+```
+```
+p['context']
+```
+>In the International Phonetic Al~~p~~habet (IPA), aspirated consonants are written using the symbols for voiceless consonants followed by the aspiration modifier letter ⟨◌ʰ⟩, a superscript form of the symbol for the voiceless glottal fricative ⟨h⟩. For instance, ⟨***p***⟩ represents the voiceless bilabial stop, and ⟨pʰ⟩ represents the aspirated bilabial stop.
