@@ -281,7 +281,7 @@ p['qas'][2]
 ```
 p['context']
 ```
->The so-called "Sack of Palermo" is one of the major visible faces of the problem. The term is used to indicate the speculative building practices that have filled the city with poor buildings. The reduced importance of agriculture in the Sicilian economy has led to a massive migration to the cities, especially Palermo, which swelled in size, leading to rapid expansion towards the north. The regulatory plans for expansion was largely ignored in the boom. New parts of town appeared almost out of nowhere, but withou~~t ~~***parks, schools, public buildings, proper roads and the other amenities that characterise a modern city***.
+>The so-called "Sack of Palermo" is one of the major visible faces of the problem. The term is used to indicate the speculative building practices that have filled the city with poor buildings. The reduced importance of agriculture in the Sicilian economy has led to a massive migration to the cities, especially Palermo, which swelled in size, leading to rapid expansion towards the north. The regulatory plans for expansion was largely ignored in the boom. New parts of town appeared almost out of nowhere, but withou~~t~~ ***parks, schools, public buildings, proper roads and the other amenities that characterise a modern city***.
 
 ## i = 351, j = 0, k = 8
 ```
@@ -294,7 +294,7 @@ p['qas'][8]
 ```
 p['context']
 ```
->In a career spanning more than four decades, Spielberg's films have covered many themes and genres. Spielberg's earl~~y ~~***science-fiction and adventure*** films were seen as archetypes of modern Hollywood blockbuster filmmaking. In later years, his films began addressing humanistic issues such as the Holocaust (in Schindler's List), the transatlantic slave trade (in Amistad), war (in Empire of the Sun, Saving Private Ryan, War Horse and Bridge of Spies) and terrorism (in Munich). His other films include Close Encounters of the Third Kind, the Indiana Jones film series, and A.I. Artificial Intelligence.
+>In a career spanning more than four decades, Spielberg's films have covered many themes and genres. Spielberg's earl~~y~~ ***science-fiction and adventure*** films were seen as archetypes of modern Hollywood blockbuster filmmaking. In later years, his films began addressing humanistic issues such as the Holocaust (in Schindler's List), the transatlantic slave trade (in Amistad), war (in Empire of the Sun, Saving Private Ryan, War Horse and Bridge of Spies) and terrorism (in Munich). His other films include Close Encounters of the Third Kind, the Indiana Jones film series, and A.I. Artificial Intelligence.
 
 ## i = 359, j = 12, k = 1
 ```
