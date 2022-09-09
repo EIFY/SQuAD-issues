@@ -230,3 +230,107 @@ p['qas'][2]
 p['context']
 ```
 >An MP3 file is made up of MP3 frames, which consist of a header and a data block. This sequence of frames is called an elementary stream. Due to the "byte reservoir", frames are not independent items and cannot usually be extracted on arbitrary frame boundaries. The MP3 Data blocks contain the (compressed) audio information in terms of frequencies and amplitudes. The diagram shows that the MP3 Header consists of a ***sync word***, which is used to identify the beginning of a valid frame. This is followed by a bit indicating that this is the MPEG stan~~dard~~ and two bits that indicate that layer 3 is used; hence MPEG-1 Audio Layer 3 or MP3. After this, the values will differ, depending on the MP3 file. ISO/IEC 11172-3 defines the range of values for each section of the header along with the specification of the header. Most MP3 files today contain ID3 metadata, which precedes or follows the MP3 frames, as noted in the diagram.
+
+## i = 165, j = 0, k = 1
+```
+p = j['data'][165]['paragraphs'][0]
+p['qas'][1]
+```
+```
+{'question': 'What happens to information during the encoding process?', 'id': '571a275210f8ca1400304f06', 'answers': [{'text': 'g allows information from the outside world to be sensed in the form of chemical and physical stimuli.', 'answer_start': 100}], 'is_impossible': False}
+```
+```
+p['context']
+```
+>In psychology, memory is the process in which information is encoded, stored, and retrieved. ***Encoding allows information from the outside world to be sensed in the form of chemical and physical stimuli.*** In the first stage the information must be changed so that it may be put into the encoding process. Storage is the second memory stage or process. This entails that information is maintained over short periods of time. Finally the third process is the retrieval of information that has been stored. Such information must be located and returned to the consciousness. Some retrieval attempts may be effortless due to the type of information, and other attempts to remember stored information may be more demanding for various reasons.
+
+## i = 210, j = 67, k = 3
+```
+p = j['data'][210]['paragraphs'][67]
+p['qas'][3]
+```
+```
+{'question': 'Are there any alternatives to the public school system in Burma ?', 'id': '572908166aef0514001549cb', 'answers': [{'text': 'privately funded English language schoo', 'answer_start': 315}], 'is_impossible': False}
+```
+```
+p['context']
+```
+>The educational system of Myanmar is operated by the government agency, the Ministry of Education. The education system is based on the United Kingdom's system due to nearly a century of British and Christian presences in Myanmar. Nearly all schools are government-operated, but there has been a recent increase in ***privately funded English language schools***. Schooling is compulsory until the end of elementary school, approximately about 9 years old, while the compulsory schooling age is 15 or 16 at international level.
+
+## i = 306, j = 30, k = 2
+```
+p = j['data'][306]['paragraphs'][30]
+p['qas'][2]
+```
+```
+{'question': 'Who made the first US mandolin?', 'id': '5728b4714b864d1900164c70', 'answers': [{'text': 'Joseph Bohm', 'answer_start': 244}], 'is_impossible': False}
+```
+```
+p['context']
+```
+>Mandolin awareness in the United States blossomed in the 1880s, as the instrument became part of a fad that continued into the mid-1920s. According to Clarence L. Partee, the first mandolin made in the United States was made in 1883 or 1884 by ***Joseph Bohmann***, who was an established maker of violins in Chicago. Partee characterized the early instrument as being larger than the European instruments he was used to, with a "peculiar shape" and "crude construction," and said that the quality improved, until American instruments were "superior" to imported instruments. At the time, Partee was using an imported French-made mandolin.
+
+## i = 319, j = 15, k = 2
+```
+p = j['data'][319]['paragraphs'][15]
+p['qas'][2]
+```
+```
+{'question': 'What did Palermo expansion lack?', 'id': '572967351d046914007793ad', 'answers': [{'text': 't parks, schools, public buildings, proper roads and the other amenities that characterise a modern city', 'answer_start': 518}], 'is_impossible': False}
+```
+```
+p['context']
+```
+>The so-called "Sack of Palermo" is one of the major visible faces of the problem. The term is used to indicate the speculative building practices that have filled the city with poor buildings. The reduced importance of agriculture in the Sicilian economy has led to a massive migration to the cities, especially Palermo, which swelled in size, leading to rapid expansion towards the north. The regulatory plans for expansion was largely ignored in the boom. New parts of town appeared almost out of nowhere, but withou~~t ~~***parks, schools, public buildings, proper roads and the other amenities that characterise a modern city***.
+
+## i = 351, j = 0, k = 8
+```
+p = j['data'][351]['paragraphs'][0]
+p['qas'][8]
+```
+```
+{'question': 'What type of films did Spielberg find early success with?', 'id': '573189d6e6313a140071d066', 'answers': [{'text': 'y science-fiction and adventure', 'answer_start': 116}], 'is_impossible': False}
+```
+```
+p['context']
+```
+>In a career spanning more than four decades, Spielberg's films have covered many themes and genres. Spielberg's earl~~y ~~***science-fiction and adventure*** films were seen as archetypes of modern Hollywood blockbuster filmmaking. In later years, his films began addressing humanistic issues such as the Holocaust (in Schindler's List), the transatlantic slave trade (in Amistad), war (in Empire of the Sun, Saving Private Ryan, War Horse and Bridge of Spies) and terrorism (in Munich). His other films include Close Encounters of the Third Kind, the Indiana Jones film series, and A.I. Artificial Intelligence.
+
+## i = 359, j = 12, k = 1
+```
+p = j['data'][359]['paragraphs'][12]
+p['qas'][1]
+```
+```
+{'question': 'Why were experiments done on luminiferous aether in the 19 Century?', 'id': '572ebe0a03f98919007569d2', 'answers': [{'text': '"While the interstellar absorbing medium may be simply the ether, [it] is characteris', 'answer_start': 901}], 'is_impossible': False}
+```
+```
+p['context']
+```
+>While outer space provides the most rarefied example of a naturally occurring partial vacuum, the heavens were originally thought to be seamlessly filled by a rigid indestructible material called aether. Borrowing somewhat from the pneuma of Stoic physics, aether came to be regarded as the rarefied air from which it took its name, (see Aether (mythology)). Early theories of light posited a ubiquitous terrestrial and celestial medium through which light propagated. Additionally, the concept informed Isaac Newton's explanations of both refraction and of radiant heat. ***19th century experiments into this luminiferous aether attempted to detect a minute drag on the Earth's orbit.*** While the Earth does, in fact, move through a relatively dense medium in comparison to that of interstellar space, the drag is so minuscule that it could not be detected. In 1912, astronomer Henry Pickering commented: ~~"While the interstellar absorbing medium may be simply the ether, [it] is characteris~~tic of a gas, and free gaseous molecules are certainly there".
+
+## i = 374, j = 29, k = 0
+```
+p = j['data'][374]['paragraphs'][29]
+p['qas'][0]
+```
+```
+{'question': 'Can a DBMS be transfered to a different DBMS?', 'id': '572fb6f904bcaa1900d76c27', 'answers': [{'text': 'ano', 'answer_start': 50}], 'is_impossible': False}
+```
+```
+p['context']
+```
+>***A database built with one DBMS is not portable to another DBMS (i.e., the other DBMS cannot run it).*** However, in some situations it is desirable to move, migrate a database from one DBMS to another. The reasons are primarily economical (different DBMSs may have different total costs of ownership or TCOs), functional, and operational (different DBMSs may have different capabilities). The migration involves the database's transformation from one DBMS type to another. The transformation should maintain (if possible) the database related application (i.e., all related application programs) intact. Thus, the database's conceptual and external architectural levels should be maintained in the transformation. It may be desired that also some aspects of the architecture internal level are maintained. A complex or large database migration may be a complicated and costly (one-time) project by itself, which should be factored into the decision to migrate. This in spite of the fact that tools may exist to help migration between specific DBMSs. Typically a DBMS vendor provides tools to help importing databases from other popular DBMSs.
+
+## i = 431, j = 13, k = 3
+```
+p = j['data'][431]['paragraphs'][13]
+p['qas'][3]
+```
+```
+{'question': 'Where is the main base for the Tajikistan air force?', 'id': '5733b06ad058e614000b605c', 'answers': [{'text': 't located 15 km southwest of Dushanbe', 'answer_start': 489}], 'is_impossible': False}
+```
+```
+p['context']
+```
+>Russian border troops were stationed along the Tajik–Afghan border until summer 2005. Since the September 11, 2001 attacks, French troops have been stationed at the Dushanbe Airport in support of air operations of NATO's International Security Assistance Force in Afghanistan. United States Army and Marine Corps personnel periodically visit Tajikistan to conduct joint training missions of up to several weeks duration. The Government of India rebuilt the ***Ayni Air Base, a military airport located 15 km southwest of Dushanbe***, at a cost of $70 million, completing the repairs in September 2010. It is now the main base of the Tajikistan air force. There have been talks with Russia concerning use of the Ayni facility, and Russia continues to maintain a large base on the outskirts of Dushanbe.
