@@ -92,7 +92,7 @@ p['qas'][0]
 ```
 p['context']
 ```
->Before the release of iOS 5, the iPod branding was used for the media player included with the iPh***one*** and iPad, a combination of the Music and Videos apps on the iPod Touch. As of iOS 5, separate apps named "Music" and "Videos" are standardized across all iOS-powered products. While the iPhone and iPad have essentially the same media player capabilities as the iPod line, they are generally treated as separate products. During the middle of 2010, iPhone sales overtook those of the iPod.'
+>Before the release of iOS 5, the iPod branding was used for the media player included with the iPh***one*** and iPad, a combination of the Music and Videos apps on the iPod Touch. As of iOS 5, separate apps named "Music" and "Videos" are standardized across all iOS-powered products. While the iPhone and iPad have essentially the same media player capabilities as the iPod line, they are generally treated as separate products. During the middle of 2010, iPhone sales overtook those of the iPod.
 
 The answer span uses "one" within "iPh***one***", which is strange but I am leaving this alone due to the lack of better alternatives.
 
