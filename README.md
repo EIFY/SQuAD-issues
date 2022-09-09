@@ -198,3 +198,35 @@ p['qas'][2]
 p['context']
 ```
 >In the International Phonetic Al~~p~~habet (IPA), aspirated consonants are written using the symbols for voiceless consonants followed by the aspiration modifier letter ⟨◌ʰ⟩, a superscript form of the symbol for the voiceless glottal fricative ⟨h⟩. For instance, ⟨***p***⟩ represents the voiceless bilabial stop, and ⟨pʰ⟩ represents the aspirated bilabial stop.
+
+## i = 68, j = 12, k = 2
+```
+p = j['data'][68]['paragraphs'][12]
+p['qas'][2]
+```
+```
+{'question': 'Along with variety and languoid, what is another term used for a language without determining its independent status?',
+ 'id': '56e824c637bdd419002c446a',
+ 'answers': [{'text': 'lect', 'answer_start': 163}],
+ 'is_impossible': False}
+```
+```
+p['context']
+```
+>There are various terms that linguists may use to avoid taking a position on whether the speech of a community is an independent language in its own right or a dia~~lect~~ of another language. Perhaps the most common is "variety"; "***lect***" is another. A more general term is "languoid", which does not distinguish between dialects, languages, and groups of languages, whether genealogically related or not.
+
+## i = 100, j = 25, k = 2
+```
+p = j['data'][100]['paragraphs'][25]
+p['qas'][2]
+```
+```
+{'question': 'What is used to identify the begining of a valid frame of an MP3 header?',
+ 'id': '5706300775f01819005e7a62',
+ 'answers': [{'text': 'dard', 'answer_start': 550}],
+ 'is_impossible': False}
+```
+```
+p['context']
+```
+>An MP3 file is made up of MP3 frames, which consist of a header and a data block. This sequence of frames is called an elementary stream. Due to the "byte reservoir", frames are not independent items and cannot usually be extracted on arbitrary frame boundaries. The MP3 Data blocks contain the (compressed) audio information in terms of frequencies and amplitudes. The diagram shows that the MP3 Header consists of a ***sync word***, which is used to identify the beginning of a valid frame. This is followed by a bit indicating that this is the MPEG stan~~dard~~ and two bits that indicate that layer 3 is used; hence MPEG-1 Audio Layer 3 or MP3. After this, the values will differ, depending on the MP3 file. ISO/IEC 11172-3 defines the range of values for each section of the header along with the specification of the header. Most MP3 files today contain ID3 metadata, which precedes or follows the MP3 frames, as noted in the diagram.
