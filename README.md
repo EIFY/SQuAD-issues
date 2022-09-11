@@ -78,7 +78,9 @@ bpe.encode(' of spiritual')
 ```
 Since such case indicates that the preceding characters and following characters are expected to occur together but have been cut off inadvertently, it's worthwhile examining such answer spans more closely. For the examined answer spans below, I took the liberty of presenting the ~~original answer span~~ with strikethrough and ***my suggestion*** with bold and italic.
 
-## i = 3, j = 3, k = 0
+## Train set
+
+### i = 3, j = 3, k = 0
 ```
 p = j['data'][3]['paragraphs'][3]
 p['qas'][0]
@@ -96,7 +98,7 @@ p['context']
 
 The answer span uses "one" within "iPh***one***", which is strange but I am leaving this alone due to the lack of better alternatives.
 
-## i = 11, j = 82, k = 3
+### i = 11, j = 82, k = 3
 ```
 p = j['data'][11]['paragraphs'][82]
 p['qas'][3]
@@ -114,7 +116,7 @@ p['context']
 
 This is where the encoding example above  came from. Using "ritual" within spi~~ritual~~ is not only strange but also incomplete: ***ritual, visualization, physical exercises, and meditation*** is the complete answer.
 
-## i = 23, j = 29, k = 1
+### i = 23, j = 29, k = 1
 ```
 p = j['data'][23]['paragraphs'][29]
 p['qas'][1]
@@ -130,7 +132,7 @@ p['context']
 ```
 >Currently, the Regular Force comp~~one~~nt of the Army consists of three field-ready brigade groups: 1 Canadian Mechanized Brigade Group, at CFB Edmonton and CFB Shilo; 2 Canadian Mechanized Brigade Group, at CFB Petawawa and CFB Gagetown; and 5 Canadian Mechanized Brigade Group, at CFB Valcartier and Quebec City. Each contains ***one*** regiment each of artillery, armour, and combat engineers, three battalions of infantry (all scaled in the British fashion), one battalion for logistics, a squadron for headquarters/signals, and several smaller support organizations. A tactical helicopter squadron and a field ambulance are co-located with each brigade, but do not form part of the brigade's command structure.
 
-## i = 26, j = 22, k = 1
+### i = 26, j = 22, k = 1
 ```
 p = j['data'][26]['paragraphs'][22]
 p['qas'][1]
@@ -148,7 +150,7 @@ p['context']
 
 The original answer span "kno" is nonsensical. Using "no" within "k***no***wn" is still strange but at least correct.
 
-## i = 26, j = 31, k = 2
+### i = 26, j = 31, k = 2
 ```
 p = j['data'][26]['paragraphs'][31]
 p['qas'][2]
@@ -166,7 +168,7 @@ p['context']
 
 Same as the above.
 
-## i = 40, j = 16, k = 2
+### i = 40, j = 16, k = 2
 ```
 p = j['data'][40]['paragraphs'][16]
 p['qas'][2]
@@ -183,7 +185,7 @@ p['context']
 >It is easy for Western-educated scholars to fall into the trap of viewing hunter-gatherer social and sexual arrange~~men~~ts in the light of Western values.[editorializing] One common arrangement is the sexual division of labour, with women doing most of the gathering, while ***men*** concentrate on big game hunting. It might be imagined that this arrangement oppresses women, keeping them in the domestic sphere. However, according to some observers, hunter-gatherer women would not understand this interpretation. Since childcare is collective, with every baby having multiple mothers and male carers, the domestic sphere is not atomised or privatised but an empowering place to be.[citation needed] In all hunter-gatherer societies, women appreciate the meat brought back to camp by men. An illustrative account is Megan Biesele's study of the southern African Ju/'hoan, 'Women Like Meat'. Recent archaeological research suggests that the sexual division of labor was the fundamental organisational innovation that gave Homo sapiens the edge over the Neanderthals, allowing our ancestors to migrate from Africa and spread across the globe.
 
 
-## i = 48, j = 2, k = 2
+### i = 48, j = 2, k = 2
 ```
 p = j['data'][48]['paragraphs'][2]
 p['qas'][2]
@@ -199,7 +201,7 @@ p['context']
 ```
 >In the International Phonetic Al~~p~~habet (IPA), aspirated consonants are written using the symbols for voiceless consonants followed by the aspiration modifier letter ⟨◌ʰ⟩, a superscript form of the symbol for the voiceless glottal fricative ⟨h⟩. For instance, ⟨***p***⟩ represents the voiceless bilabial stop, and ⟨pʰ⟩ represents the aspirated bilabial stop.
 
-## i = 68, j = 12, k = 2
+### i = 68, j = 12, k = 2
 ```
 p = j['data'][68]['paragraphs'][12]
 p['qas'][2]
@@ -215,7 +217,7 @@ p['context']
 ```
 >There are various terms that linguists may use to avoid taking a position on whether the speech of a community is an independent language in its own right or a dia~~lect~~ of another language. Perhaps the most common is "variety"; "***lect***" is another. A more general term is "languoid", which does not distinguish between dialects, languages, and groups of languages, whether genealogically related or not.
 
-## i = 100, j = 25, k = 2
+### i = 100, j = 25, k = 2
 ```
 p = j['data'][100]['paragraphs'][25]
 p['qas'][2]
@@ -231,7 +233,7 @@ p['context']
 ```
 >An MP3 file is made up of MP3 frames, which consist of a header and a data block. This sequence of frames is called an elementary stream. Due to the "byte reservoir", frames are not independent items and cannot usually be extracted on arbitrary frame boundaries. The MP3 Data blocks contain the (compressed) audio information in terms of frequencies and amplitudes. The diagram shows that the MP3 Header consists of a ***sync word***, which is used to identify the beginning of a valid frame. This is followed by a bit indicating that this is the MPEG stan~~dard~~ and two bits that indicate that layer 3 is used; hence MPEG-1 Audio Layer 3 or MP3. After this, the values will differ, depending on the MP3 file. ISO/IEC 11172-3 defines the range of values for each section of the header along with the specification of the header. Most MP3 files today contain ID3 metadata, which precedes or follows the MP3 frames, as noted in the diagram.
 
-## i = 165, j = 0, k = 1
+### i = 165, j = 0, k = 1
 ```
 p = j['data'][165]['paragraphs'][0]
 p['qas'][1]
@@ -244,7 +246,7 @@ p['context']
 ```
 >In psychology, memory is the process in which information is encoded, stored, and retrieved. ***Encoding allows information from the outside world to be sensed in the form of chemical and physical stimuli.*** In the first stage the information must be changed so that it may be put into the encoding process. Storage is the second memory stage or process. This entails that information is maintained over short periods of time. Finally the third process is the retrieval of information that has been stored. Such information must be located and returned to the consciousness. Some retrieval attempts may be effortless due to the type of information, and other attempts to remember stored information may be more demanding for various reasons.
 
-## i = 210, j = 67, k = 3
+### i = 210, j = 67, k = 3
 ```
 p = j['data'][210]['paragraphs'][67]
 p['qas'][3]
@@ -257,7 +259,7 @@ p['context']
 ```
 >The educational system of Myanmar is operated by the government agency, the Ministry of Education. The education system is based on the United Kingdom's system due to nearly a century of British and Christian presences in Myanmar. Nearly all schools are government-operated, but there has been a recent increase in ***privately funded English language schools***. Schooling is compulsory until the end of elementary school, approximately about 9 years old, while the compulsory schooling age is 15 or 16 at international level.
 
-## i = 306, j = 30, k = 2
+### i = 306, j = 30, k = 2
 ```
 p = j['data'][306]['paragraphs'][30]
 p['qas'][2]
@@ -270,7 +272,7 @@ p['context']
 ```
 >Mandolin awareness in the United States blossomed in the 1880s, as the instrument became part of a fad that continued into the mid-1920s. According to Clarence L. Partee, the first mandolin made in the United States was made in 1883 or 1884 by ***Joseph Bohmann***, who was an established maker of violins in Chicago. Partee characterized the early instrument as being larger than the European instruments he was used to, with a "peculiar shape" and "crude construction," and said that the quality improved, until American instruments were "superior" to imported instruments. At the time, Partee was using an imported French-made mandolin.
 
-## i = 319, j = 15, k = 2
+### i = 319, j = 15, k = 2
 ```
 p = j['data'][319]['paragraphs'][15]
 p['qas'][2]
@@ -283,7 +285,7 @@ p['context']
 ```
 >The so-called "Sack of Palermo" is one of the major visible faces of the problem. The term is used to indicate the speculative building practices that have filled the city with poor buildings. The reduced importance of agriculture in the Sicilian economy has led to a massive migration to the cities, especially Palermo, which swelled in size, leading to rapid expansion towards the north. The regulatory plans for expansion was largely ignored in the boom. New parts of town appeared almost out of nowhere, but withou~~t~~ ***parks, schools, public buildings, proper roads and the other amenities that characterise a modern city***.
 
-## i = 351, j = 0, k = 8
+### i = 351, j = 0, k = 8
 ```
 p = j['data'][351]['paragraphs'][0]
 p['qas'][8]
@@ -296,7 +298,7 @@ p['context']
 ```
 >In a career spanning more than four decades, Spielberg's films have covered many themes and genres. Spielberg's earl~~y~~ ***science-fiction and adventure*** films were seen as archetypes of modern Hollywood blockbuster filmmaking. In later years, his films began addressing humanistic issues such as the Holocaust (in Schindler's List), the transatlantic slave trade (in Amistad), war (in Empire of the Sun, Saving Private Ryan, War Horse and Bridge of Spies) and terrorism (in Munich). His other films include Close Encounters of the Third Kind, the Indiana Jones film series, and A.I. Artificial Intelligence.
 
-## i = 359, j = 12, k = 1
+### i = 359, j = 12, k = 1
 ```
 p = j['data'][359]['paragraphs'][12]
 p['qas'][1]
@@ -309,7 +311,7 @@ p['context']
 ```
 >While outer space provides the most rarefied example of a naturally occurring partial vacuum, the heavens were originally thought to be seamlessly filled by a rigid indestructible material called aether. Borrowing somewhat from the pneuma of Stoic physics, aether came to be regarded as the rarefied air from which it took its name, (see Aether (mythology)). Early theories of light posited a ubiquitous terrestrial and celestial medium through which light propagated. Additionally, the concept informed Isaac Newton's explanations of both refraction and of radiant heat. ***19th century experiments into this luminiferous aether attempted to detect a minute drag on the Earth's orbit.*** While the Earth does, in fact, move through a relatively dense medium in comparison to that of interstellar space, the drag is so minuscule that it could not be detected. In 1912, astronomer Henry Pickering commented: ~~"While the interstellar absorbing medium may be simply the ether, [it] is characteris~~tic of a gas, and free gaseous molecules are certainly there".
 
-## i = 374, j = 29, k = 0
+### i = 374, j = 29, k = 0
 ```
 p = j['data'][374]['paragraphs'][29]
 p['qas'][0]
@@ -322,7 +324,7 @@ p['context']
 ```
 >***A database built with one DBMS is not portable to another DBMS (i.e., the other DBMS cannot run it).*** However, in some situations it is desirable to move, migrate a database from one DBMS to another. The reasons are primarily economical (different DBMSs may have different total costs of ownership or TCOs), functional, and operational (different DBMSs may have different capabilities). The migration involves the database's transformation from one DBMS type to another. The transformation should maintain (if possible) the database related application (i.e., all related application programs) intact. Thus, the database's conceptual and external architectural levels should be maintained in the transformation. It may be desired that also some aspects of the architecture internal level are maintained. A complex or large database migration may be a complicated and costly (one-time) project by itself, which should be factored into the decision to migrate. This in spite of the fact that tools may exist to help migration between specific DBMSs. Typically a DBMS vendor provides tools to help importing databases from other popular DBMSs.
 
-## i = 431, j = 13, k = 3
+### i = 431, j = 13, k = 3
 ```
 p = j['data'][431]['paragraphs'][13]
 p['qas'][3]
