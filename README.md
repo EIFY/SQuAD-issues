@@ -78,6 +78,279 @@ bpe.encode(' of spiritual')
 ```
 Since such case indicates that the preceding characters and following characters are expected to occur together but have been cut off inadvertently, it's worthwhile examining such answer spans more closely. For the examined answer spans below, I took the liberty of presenting the ~~original answer span~~ with strikethrough and ***my suggestion*** with bold and italic.
 
+As the next step, I exempt the known examples above, lower the threshold, and count the distinct differences in the decoded strings:
+```
+known = set(l)
+import collections
+
+c = collections.Counter()
+
+def squad2_ligature_check(data, threshold, known):
+    l = []
+    def check(l1, l2):
+        n = len(l2)
+        i = 0
+        while i < n and l1[i] == l2[i]:
+            i += 1
+        c[bpe.decode(l1[i:n]), bpe.decode(l2[i:n])] += 1
+        return n - i > threshold
+    for i, d in enumerate(data):
+        for j, p in enumerate(d['paragraphs']):
+            context = bpe.encode(p['context'])
+            for k, q in enumerate(p['qas']):
+                if (i, j, k) not in known:
+                    question = bpe.encode(q['question'])
+                    if not q['is_impossible']:
+                        a = q['answers']
+                        assert len(a) == 1
+                        a = a[0]
+                        start_index = a['answer_start']
+                        prefix = bpe.encode(p['context'][:start_index].rstrip())
+                        up_to = bpe.encode(p['context'][:start_index + len(a['text'])])
+                        if check(context, prefix) or check(context, up_to):
+                            l.append((i, j, k))
+    return l
+
+l = squad2_ligature_check(j['data'], 0, known)
+
+for k, v in c.most_common():
+    print(k, v)
+```
+```
+('', '') 172342
+(').', ')') 176
+('),', ')') 146
+('".', '"') 145
+('",', '"') 113
+('%.', '%') 66
+('%,', '%') 44
+('%)', '%') 43
+('.,', '.') 30
+('."', '.') 26
+('%),', '%') 17
+('")', '"') 16
+('%).', '%') 15
+('.[', '.') 10
+(' ("', ' (') 8
+('"),', '")') 8
+('%;', '%') 7
+(');', ')') 7
+('").', '")') 6
+('"—', '"') 6
+("'.", "'") 6
+(' ($', ' (') 5
+(' 2015', ' 20') 5
+(' European', ' Europe') 5
+('))', ')') 5
+('!"', '!') 4
+('+,', '+') 4
+('").', '"') 4
+(' sixth', ' six') 3
+(' "\'', ' "') 3
+(' 18', ' 181') 3
+(' 23', ' 2') 3
+(' fourth', ' four') 3
+('".[', '"') 3
+('/.', '/') 3
+('.)', '.') 3
+('%),', '%)') 3
+('...', '.') 2
+('fourth', 'four') 2
+('2007', '200') 2
+(' 32', ' 3') 2
+(' 2003', ' 200') 2
+(' 2004', ' 2') 2
+(' 100', ' 10') 2
+(' 2008', ' 2') 2
+("'", '\'"') 2
+(' 353', ' 3') 2
+(' Buddh', ' Buddha') 2
+(' 18', ' 1') 2
+('.:', '.') 2
+(' 12', ' 1') 2
+(' notes', ' no') 2
+(' 35', ' 3') 2
+('?"', '?') 2
+(' 15', ' 1') 2
+(' 18', ' 183') 2
+(' Postal', ' Post') 2
+("',", "'") 2
+(' 2016', ' 20') 2
+(' (£', ' (') 2
+('");', '")') 2
+(' nobility', ' no') 2
+(',"', ',') 2
+('%);', '%') 2
+(')—', ')') 2
+(' evolutionary', ' evolution') 2
+('.).', '.') 2
+('"),', '"') 2
+('.),', '.') 2
+(' Rob', ' Rober') 1
+(' oper', ' opera') 1
+(' Tibetan', ' Tibet') 1
+('2015', '201') 1
+('..."', '...') 1
+(' manually', ' manual') 1
+(' Japanese', ' Japan') 1
+(' Mall', ' M') 1
+(' City', ' C') 1
+(' 280', ' 2') 1
+(' 11', ' 1') 1
+(' 550', ' 5') 1
+('33', '3') 1
+(' 200', ' 2') 1
+(' 2002', ' 2') 1
+(' 2013', ' 2') 1
+(' century', ' ce') 1
+('ay', 'aya') 1
+('aks', 'ak') 1
+(' personal', ' person') 1
+(' four', ' fourteen') 1
+(' ha', ' hair') 1
+(' 2015', ' 201') 1
+(' 1990', ' 1') 1
+(' 2009', ' 200') 1
+(' 2008', ' 200') 1
+(' fear', ' fearless') 1
+(' breeding', ' breed') 1
+(' emotional', ' emotion') 1
+(' hunting', ' hunt') 1
+(' 72', ' 7') 1
+(' southwestern', ' southwest') 1
+(' 2004', ' 20') 1
+('os', 'o') 1
+(']', ']"') 1
+(' Islamic', ' Islam') 1
+(' watt', ' w') 1
+(' lighting', ' light') 1
+(' architecture', ' architect') 1
+(' Architecture', ' Architect') 1
+(' environmentally', ' environment') 1
+(' d', ' dash') 1
+(' 2009', ' 20') 1
+(' 1930', ' 19') 1
+(' northern', ' north') 1
+(' General', ' Ge') 1
+('500', '5') 1
+('27', '2') 1
+(' 1917', ' 1') 1
+(' negatively', ' negative') 1
+(' 1897', ' 18') 1
+('487', '4') 1
+(' III', ' I') 1
+(' 158', ' 15') 1
+(' 2010', ' 20') 1
+(' 1967', ' 1') 1
+('290', '2') 1
+(' 10', ' 1') 1
+(' 230', ' 2') 1
+('/,', '/') 1
+('Hyd', 'H') 1
+(' electr', ' electro') 1
+(' 100', ' 1') 1
+(' 1957', ' 195') 1
+(' 400', ' 4') 1
+(' 1962', ' 196') 1
+(' Spain', ' Spa') 1
+(' higher', ' high') 1
+(' 227', ' 22') 1
+('+.', '+') 1
+(' Transportation', ' T') 1
+(' B', ' Bi') 1
+(' phon', ' ph') 1
+(' 216', ' 2') 1
+(' Zeal', ' Zealand') 1
+(' extremely', ' extreme') 1
+(' gol', ' golf') 1
+(' 13', ' 1') 1
+('esse', 'es') 1
+(' 14', ' 148') 1
+(' 259', ' 2') 1
+(' indirectly', ' indirect') 1
+('The', 'T') 1
+(' peacefully', ' peaceful') 1
+(' regional', ' region') 1
+(' 1950', ' 19') 1
+('].', ']') 1
+(' The', ' Th') 1
+(' represents', ' represent') 1
+(' western', ' west') 1
+(' largest', ' large') 1
+(' Nonetheless', ' No') 1
+(' sex', ' se') 1
+('...', '..') 1
+(' subjects', ' s') 1
+(".'", '.') 1
+(' avoiding', ' avoid') 1
+(' opening', ' open') 1
+('played', 'play') 1
+(' inv', ' in') 1
+('In', 'I') 1
+('uses', 'us') 1
+(' businesses', ' business') 1
+(' Face', ' F') 1
+(' resulted', ' r') 1
+('uss', 'ussia') 1
+(' Florida', ' Fl') 1
+(' 1966', ' 1') 1
+(' 1968', ' 1') 1
+('!.', '!') 1
+(' finally', ' final') 1
+(')"', ')') 1
+(' and', ' a') 1
+(' freedoms', ' freedom') 1
+(' 26', ' 2') 1
+('The', 'Th') 1
+(' the', ' th') 1
+(')),', ')') 1
+(').[', ')') 1
+('Many', 'M') 1
+('.",', '.') 1
+(' singing', ' sing') 1
+(' Speaking', ' Speak') 1
+('!",', '!"') 1
+(')[', ')') 1
+('-"', '-') 1
+('ity', 'i') 1
+(' usually', ' u') 1
+('Federal', 'F') 1
+('..."', '..') 1
+(' b', ' bilateral') 1
+(' maintained', ' maintain') 1
+('?).', '?)') 1
+(' (~', ' (') 1
+('.).', '.)') 1
+(' occurs', ' occur') 1
+(' (#', ' (') 1
+('!,', '!') 1
+("'),", "'") 1
+(' 140', ' 1') 1
+(')-', ')') 1
+(' whit', ' white') 1
+('.-', '.') 1
+(' D', ' Do') 1
+(' 1999', ' 199') 1
+('uls', 'ul') 1
+('-,', '-') 1
+(' 18', ' 182') 1
+(' 300', ' 3') 1
+(' world', ' wo') 1
+('":', '"') 1
+('";', '"') 1
+(')', ')?') 1
+(' (>', ' (') 1
+('ans', 'a') 1
+(' issued', ' i') 1
+(' enriched', ' enrich') 1
+('$.', '$') 1
+('?",', '?"') 1
+(' (−', ' (') 1
+(' 1800', ' 180') 1
+(' was', ' wa') 1
+```
+As we can see, most of them are grouped punctuations that reflect the inherent limitations of BPE. However, the others look worrying and may also be words or numbers cut off inadvertently.
+
 ## Train set
 
 ### i = 3, j = 3, k = 0
