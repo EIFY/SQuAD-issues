@@ -42,7 +42,8 @@ def squad2_ligature_check(data, threshold):
                         l.append((i, j, k))
     return l
 
-squad2_ligature_check(j['data'], 1)
+l = squad2_ligature_check(j['data'], 1)
+l
 ```
 ```
 [(3, 3, 0),
