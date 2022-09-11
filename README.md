@@ -93,8 +93,10 @@ def squad2_ligature_check(data, threshold, known):
         i = 0
         while i < n and l1[i] == l2[i]:
             i += 1
+        if n - i <= threshold:
+            return False
         c[bpe.decode(l1[i:n]), bpe.decode(l2[i:n])] += 1
-        return n - i > threshold
+        return True
     for i, d in enumerate(data):
         for j, p in enumerate(d['paragraphs']):
             context = bpe.encode(p['context'])
@@ -118,7 +120,6 @@ for k, v in c.most_common():
     print(k, v)
 ```
 ```
-('', '') 172342
 (').', ')') 176
 ('),', ')') 146
 ('".', '"') 145
