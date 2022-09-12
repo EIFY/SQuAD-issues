@@ -389,7 +389,7 @@ p['context']
 ```
 >Though based upon Mahayana, Tibeto-Mongolian Buddhism is one of the schools that practice Vajrayana or "Diamond Vehicle" (also referred to as Mantrayāna, Tantrayāna, Tantric Buddhism, or esoteric Buddhism). It accepts all the basic concepts of Mahāyāna, but also includes a vast array of spi~~ritual~~ and physical techniques designed to enhance Buddhist practice. Tantric Buddhism is largely concerned with ritual and meditative practices. One component of the Vajrayāna is harnessing psycho-physical energy through ***ritual, visualization, physical exercises, and meditation*** as a means of developing the mind. Using these techniques, it is claimed that a practitioner can achieve Buddhahood in one lifetime, or even as little as three years. In the Tibetan tradition, these practices can include sexual yoga, though only for some very advanced practitioners.
 
-This is where the encoding example above  came from. Using "ritual" within spi~~ritual~~ is not only strange but also incomplete: ***ritual, visualization, physical exercises, and meditation*** is the complete answer. This particular case may be due to the pratice of using the majority vote to reduce crowdworker noise and "breaking ties in favor of answering questions and preferring shorter answers to longer ones".
+This is where the encoding example above  came from. Using "ritual" within spi~~ritual~~ is not only strange but also incomplete: ***ritual, visualization, physical exercises, and meditation*** is the complete answer. This particular case may be due to the practice of using majority vote to reduce crowdworker noise and "breaking ties in favor of answering questions and preferring shorter answers to longer ones".
 
 ### i = 23, j = 29, k = 1
 ```
